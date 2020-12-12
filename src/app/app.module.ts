@@ -7,17 +7,21 @@ import { AppComponent } from './app.component';
   
 import { PostModule } from './post/post.module';
 import { HomeComponent } from './home/home.component';
+import { BookhomeComponent } from './home/bookhome/bookhome.component';
+import { FormsModule } from '@angular/forms';
   
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    BookhomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PostModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
