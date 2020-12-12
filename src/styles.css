@@ -2,6 +2,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 input.ng-touched.ng-invalid {
   border-color: #dc3545;
+  border-width: 3px;
 }
 
 input.ng-valid {
@@ -10,6 +11,7 @@ input.ng-valid {
 }
 textarea.ng-touched.ng-invalid {
   border-color: #dc3545;
+  border-width: 3px;
 }
 
 textarea.ng-valid {
