@@ -1,5 +1,9 @@
 <div class="container">
 
+  <div *ngIf="childData">
+    <h1 class="text-center">{{ childData +"!! LET THE JOURNEY BEGINS :)" }}</h1>
+  </div>
+    
     <!-- Main component for a primary marketing message or call to action -->
     <div class="jumbotron">
       <h1 class="text-center">Welcome to Boulbi</h1>
@@ -24,7 +28,7 @@
         </div>
       </div>
     
-      <app-bookhome [namefromparent]="namefromparent"></app-bookhome>
+      <app-bookhome [namefromparent]="namefromparent" (notify)="parentMethod($event)"></app-bookhome>
       
     </div>
     

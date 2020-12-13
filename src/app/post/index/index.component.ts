@@ -10,7 +10,19 @@ import { PostService } from '../shared/post.service';
 })
 export class IndexComponent implements OnInit {
    
+  title: string;
   posts: Post[] = [];
+
+  search(){
+    if(this.title !=""){
+      this.posts = this.posts.filter(res=>{
+        return res.title.toLocaleLowerCase().match(this.title.toLocaleLowerCase())
+      });
+    }else if(this.title == ""){
+      this.ngOnInit();
+    }
+
+  }
   
   constructor(public postService: PostService) { }
   

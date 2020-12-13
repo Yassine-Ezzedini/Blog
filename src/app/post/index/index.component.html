@@ -12,6 +12,15 @@
     </div>
   </div>
   
+  
+    <div class="input-group mb-3 d-flex justify-content-center">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+      </div>
+      <input type="text" class="form-control" [(ngModel)]="title" (input)="search()" placeholder="Tap the title for search...">
+    </div>
+  
+
     <a href="#" routerLink="/post/create/" class="btn btn-success" style="margin-top: 20px;">Create New Post</a>
 
     <div class="row">

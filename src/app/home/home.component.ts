@@ -8,6 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   public namefromparent:string;
+
+  childData:string;
+  parentMethod(data){
+    this.childData=data;
+  }
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-bookhome',
@@ -8,6 +8,16 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BookhomeComponent implements OnInit {
 
   @Input('namefromparent') public namefromparent;
+  
+  @Output()
+  notify:EventEmitter<string> = new EventEmitter<string>();
+  
+  passData(){
+    this.notify.emit("YESSS");
+    console.log(this.notify.emit("YESSS"))
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {
